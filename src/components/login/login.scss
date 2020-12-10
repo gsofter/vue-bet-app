@@ -1,0 +1,124 @@
+#login {
+  .signup-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background: #fe6b01;
+    border-top: #f3bc00 3px solid;
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    overflow: hidden;
+
+    &.active {
+      max-height: 500px;
+      transition: max-height 1s ease-in-out;
+    }
+
+    .signup-form {
+      width: 100%;
+      float: left;
+      position: relative;
+      padding: 10px 0 15px;
+
+      .row {
+        margin: 0 auto;
+        display: flex;
+      }
+
+      h3 {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .login {
+        width: 100%;
+        padding: 15px;
+        float: left;
+        background: #fff;
+        box-shadow: 0 0 3px rgba(0,0,0,.5);
+        font-family: Arial,Helvetica,sans-serif;
+        margin-bottom: 10px;
+
+        label {
+          margin-bottom: 5px;
+          width: 100%;
+          font-size: 15px;
+          font-weight: 700;
+        }
+
+        .login-input {
+          width: 100%;
+          height: 35px;
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          font-family: Arial,Helvetica,sans-serif;
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .disabled {
+        pointer-events: none;
+        opacity: 0.7;
+      }
+
+      .link a {
+        text-decoration: underline;
+        color: $white;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .btn-container button {
+        background: #000;
+        border-radius: 2px;
+        text-align: center;
+        color: #fff;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        text-transform: uppercase;
+        padding: 8px 20px;
+      }
+
+      .close-btn {
+        height: 20px;
+        color: $white;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+      }
+    }
+
+    .form-close {
+      width: 100%;
+      float: left;
+      background: #cd0000;
+      text-align: center;
+      font-size: 25px;
+      color: $white;
+    }
+  }
+
+  .pad-0 {
+    padding: 0;
+  }
+
+  .content-center {
+    justify-content: center;
+  }
+}

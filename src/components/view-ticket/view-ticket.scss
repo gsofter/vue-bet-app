@@ -1,0 +1,106 @@
+#view-ticket {
+  .close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    opacity: 1;
+
+    i {
+      display: block;
+      height: inherit;
+      width: inherit;
+      background-image: url($close-icon);
+    }
+  }
+
+  .panel {
+    width: 280px;
+    margin: auto;
+    min-height: 400px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .basic-info {
+      display: grid;
+
+      font {
+        margin: auto;
+      }
+    }
+
+    .com {
+      .row {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 50px;
+
+        .grid-row {
+          display: flex;
+          align-items: center;
+
+          .item {
+            padding: 10px;
+          }
+        }
+      }
+    }
+
+    .match-info {
+      padding: 0;
+      border-bottom: 0 !important;
+    }
+
+    .bet-info,
+    .match-info,
+    .summary {
+      display: grid;
+      border-bottom: 1px solid #000000;
+      padding: 10px 0;
+
+      .border-line {
+        padding: 10px 0;
+        border-bottom: 1px solid $black;
+      }
+
+      .row {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 50px;
+
+        .team-name {
+          align-self: center;
+        }
+
+        &.Lose {
+          font,
+          span {
+            color: red;
+          }
+        }
+
+        &.Win {
+          font,
+          span {
+            color: green;
+          }
+        }
+      }
+    }
+
+    .bar-code {
+      height: 100px;
+      display: flex;
+      border-bottom-style: dotted;
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+}

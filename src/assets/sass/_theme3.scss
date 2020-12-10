@@ -1,0 +1,174 @@
+@import "variables";
+
+%paragraph-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1;
+}
+@mixin theme3($theme-header-bg, $theme-header-color, $theme-row-bg, $theme-row-color, $theme-row-hover, $theme-last-item, $theme-row-key-color) {
+  #sport .container-fluid .row .col .country-item .country-name {
+    background-image: linear-gradient(#3d4444, #2c3333);
+    color: $white;
+  }
+
+  #popup-market {
+    background: #2c3333;
+
+    .panel {
+      .table {
+        background: #232828;
+
+        tbody {
+          tr {
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+
+      .extra-markets {
+        #popup-clubed-market-type,
+        #popup-multi-row-market-type,
+        #popup-row-market-type {
+          .row {
+            border-bottom: 1px solid #ccc;
+
+            .sub-markets {
+              .sub-row:nth-child(odd) {
+                background-color: #232828;
+              }
+
+              .sub-row:nth-child(even) {
+                background-color: #2C3333;
+              }
+
+              .sub-row {
+                .sub-market {
+                  .sub-market-price {
+                    background-color: $black;
+
+                    &.selected {
+                      background-color: $yellow;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #league-container-list .tbl,
+  #pre-live-fixture-header {
+    background-color: $theme-row-bg;
+    color: $theme-header-color;
+
+    .row {
+      > .item:nth-child(odd) {
+        background-color: $theme3-row-odd-bg;
+      }
+
+      > .item:nth-child(even) {
+        background-color: $theme3-row-even-bg;
+      }
+    }
+
+    .item {
+      .market-name {
+        color: $blue;
+      }
+    }
+
+    .last-item {
+      background-color: $theme-row-bg;
+    }
+  }
+
+  #league-container-list .tbl,
+  #pre-live-fixture-row {
+    background-color: $theme-row-bg;
+    color: $theme-row-color;
+
+    .row {
+      &.fixture {
+        .info {
+          background-color: $theme-row-bg;
+          color: $theme-row-key-color;
+
+          .score-board {
+            color: $theme-row-key-color;
+          }
+        }
+      }
+
+      .last-item.count {
+        a {
+          &:hover {
+            background-color: $theme-row-hover;
+          }
+        }
+      }
+
+      > .item:nth-child(odd) {
+        .sub-row {
+          .row-item {
+            background-color: $theme3-row-odd-bg;
+
+            &.selected {
+              background-color: $yellow;
+            }
+            // &:hover {
+            //   background-color: $theme3-row-hover;
+            // }
+          }
+        }
+      }
+
+      > .item:nth-child(even) {
+        .sub-row {
+          .row-item {
+            background-color: $theme3-row-even-bg;
+
+            &.selected {
+              background-color: $yellow;
+            }
+            // &:hover {
+            //   background-color: $theme3-row-hover;
+            // }
+          }
+        }
+      }
+
+      .item {
+        .sub-row {
+          &.over-under {
+            > .row-item:first-child {
+              background-color: $theme-row-bg;
+              color: $theme-row-key-color;
+            }
+          }
+
+          .row-item {
+            background-color: $theme-row-bg;
+            color: $theme-row-color;
+
+            &.selected {
+              background-color: $yellow;
+            }
+            // &:hover {
+            //   background-color: $theme-row-hover;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme3 {
+  @include theme3($theme-3-header-bg, $theme-3-header-color, $theme-3-row-bg, $theme-3-row-color, $theme-3-row-hover, $theme-3-last-item, $theme-3-row-info-color);
+}

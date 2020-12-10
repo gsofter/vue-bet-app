@@ -1,0 +1,68 @@
+// Colors
+// --------------------------------------------------
+$white: #ffffff !default;
+$black: #000000 !default;
+$yellow: #f8b828 !default;
+$grey: #e4e4e4 !default;
+$plae-blue: #11b0ed !default;
+$dark-green: #008120 !default;
+$light-grey: #bfbfbf !default;
+$gainsboro: #dcdcdc !default;
+$eclipse: #3e3e3e !default;
+$swamp: #171919 !default;
+$swamp-1: #2c3333 !default;
+$blue: #0091d1 !default;
+$outer-space: #373b3b !default;
+$whitesmoke: #f1f1f1 !default;
+$gray20: #333 !default;
+$gray30: #888 !default;
+$philippineskyblue: #0364f9 !default;
+$green: #0a8816 !default;
+$yellow: #e8c32d !default;
+ //Theme Colors
+$lcl-bg: $plae-blue;
+$lcl-active-border: $plae-blue;
+$lcl-link-color: $white;
+$sport-countries-bg: #505050 !default;
+$live-fixture-bg: $dark-green !default;
+$theme1-live-row-odd-bg: #008120 !default;
+$theme1-live-row-even-bg: #006719 !default;
+$theme1-live-row-hover: #4CA662 !default;
+$theme2-locked-bg: #eeeeee !default;
+$theme2-row-odd-bg: #FFFFFF !default;
+$theme2-row-even-bg: #E5E5E5 !default;
+$theme2-row-hover: #999999 !default;
+$theme3-row-odd-bg: #2C3333 !default;
+$theme3-row-even-bg: #232828 !default;
+$theme3-row-hover: #6B7070 !default;
+$theme1-pre-live-row-odd-bg: #0364F9 !default;
+$theme1-pre-live-row-even-bg: #1A4AC5 !default;
+$theme1-pre-live-row-hover: #3473D2 !default;
+$theme2-table-bg: $white !default;
+$theme2-live-fill-bg: $green !default;
+$theme2-live-fill-color: $white !default;
+$theme2-live-hover-color: $green !default;
+$theme2-pre-live-fill-bg: $black !default;
+$theme2-pre-live-fill-color: $white !default;
+$theme2-pre-live-hover-color: $outer-space !default;
+$theme-2-header-bg: $white !default;
+$theme-2-header-color: $gray20 !default;
+$theme-2-row-bg: $white !default;
+$theme-2-row-color: $black !default;
+$theme-2-row-hover: $philippineskyblue !default;
+$theme-2-row-info-color: $black !default;
+$theme-2-last-item: $gray30 !default;
+$theme-3-header-bg: $swamp !default;
+$theme-3-header-color: $white !default;
+$theme-3-row-bg: $swamp-1 !default;
+$theme-3-row-color: $blue !default;
+$theme-3-row-hover: $outer-space !default;
+$theme-3-row-info-color: $white !default;
+$theme-3-last-item: $black !default; // Screen Sizes
+// --------------------------------------------------
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1024px !default;
+$screen-xlg: 1440px !default; //Text sizes
+$small-text: 16px !default;

@@ -1,0 +1,22 @@
+#home {
+  grid-template-rows: 59px 1fr;
+  display: grid;
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+
+  .body-container {
+    display: grid;
+    min-height: calc(100vh - 69px);
+    width: 100%;
+    position: relative;
+    top: 69px;
+    background: $black;
+    height: max-content;
+  }
+}

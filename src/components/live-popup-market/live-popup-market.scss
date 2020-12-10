@@ -1,0 +1,68 @@
+#live-popup-market {
+  overflow: auto;
+  background: #007f19;
+  height: 100%;
+  max-height: -moz-available;
+  max-height: -webkit-fill-available;
+  max-height: stretch;
+
+  .close {
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    opacity: 1;
+
+    i {
+      display: block;
+      height: inherit;
+      width: inherit;
+      background-image: url($close-icon);
+    }
+  }
+
+  .panel {
+    padding: 0;
+
+    .table {
+      border-bottom: 0;
+      background: #005e11;
+      border: 0;
+      margin-bottom: 6px;
+
+      tbody {
+        tr {
+          border: 0;
+          border-bottom: 1px solid #000;
+
+          > td:first-child {
+            max-width: 265px;
+          }
+
+          td {
+            color: $white;
+            text-align: left;
+            border-top: 0;
+            padding: 11px 12px 12px;
+          }
+        }
+      }
+    }
+
+    .all {
+      background: $black;
+      padding: 1px 14px;
+      display: block;
+
+      h4 {
+        color: $white;
+        padding: 0;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

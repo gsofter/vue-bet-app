@@ -1,0 +1,58 @@
+.pagination {
+    position: relative;
+    display: flex;
+    width: 50%;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 26px;
+}
+.arrow {
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+}
+.arrow button {
+    height: 60px;
+    width: 75px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.arrow button:active {
+    transform: scale(0.97);
+}
+.prevBtn {
+    background: transparent url('./img/left-arrow.png') no-repeat center;
+}
+.nextBtn {
+    background: transparent url('./img/right-arrow.png') no-repeat center;
+}
+.pagination-list {
+    display: inline-block;
+}
+.pagination-list ul {
+    list-style-type: none;
+    margin: 10px 20px;
+    padding: 0;
+}
+.pagination-list ul li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    list-style-type: none;
+}
+.pagination-list ul li button {
+    color: white;
+    border-radius: 5px;
+    background: #2a2929;
+    border: 1px solid #383838;
+    padding: 7px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.pagination-list ul li button.active {
+    background: #d28c00;
+    border: 2px solid #f6df25;
+}

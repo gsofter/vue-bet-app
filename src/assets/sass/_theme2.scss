@@ -1,0 +1,292 @@
+@import "variables";
+
+%paragraph-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1;
+}
+@mixin theme2($theme-table-bg, $theme-live-fill-bg, $theme-live-fill-color, $theme-pre-live-fill-bg,$theme-pre-live-fill-color,$theme-header-bg, $theme-header-color, $theme-row-bg, $theme-row-color, $theme-row-hover, $theme-last-item, $theme-row-key-color,$theme-live-hover-color,$theme-pre-live-hover-color) {
+  #live-popup-market {
+    .row {
+      &.sub-markets > .sub-row:nth-child(even),
+      .sub-markets > .sub-row:nth-child(odd) {
+        .sub-market {
+          .sub-market-price {
+            &.selected {
+              background-color: $theme-live-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #live-popup-market,
+  #popup-market {
+    background: $white;
+    color: $black;
+
+    .panel {
+      .table {
+        background: $gray30;
+
+        tbody {
+          tr {
+            border-bottom: 1px solid $white;
+          }
+        }
+      }
+
+      .extra-markets {
+        #popup-clubed-market-type,
+        #popup-multi-row-market-type,
+        #popup-row-market-type {
+          .market-name {
+            color: $black;
+          }
+
+          .row {
+            border-bottom: 1px solid #ccc;
+
+            .sub-markets > .sub-row:nth-child(odd) {
+              background: #e6e6e6;
+
+              .sub-market {
+                color: $black;
+
+                .sub-market-price {
+                  color: $white;
+                }
+              }
+            }
+          }
+
+          .row .sub-markets > .sub-row:nth-child(even) {
+            background: $white;
+
+            .sub-market {
+              color: $black;
+
+              .sub-market-price {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #sport .container-fluid .row .col .country-item .country-name {
+    background-image: linear-gradient(#3d4444, #2c3333);
+    color: $white;
+  }
+
+  #league-container-list .tbl,
+  #live-fixture-header,
+  #pre-live-fixture-header {
+    background-color: $theme-header-bg;
+    color: $theme-header-color;
+
+    .row {
+      > .item:nth-child(odd) {
+        background-color: $theme2-row-odd-bg;
+      }
+
+      > .item:nth-child(even) {
+        background-color: $theme2-row-even-bg;
+      }
+
+      > .items .item:nth-child(odd) {
+        background-color: $theme2-row-even-bg;
+      }
+
+      > .items .item:nth-child(even) {
+        background-color: $theme2-row-odd-bg;
+      }
+
+      .item .sub-row .sub-item {
+        color: $theme-header-color;
+      }
+    }
+  }
+
+  #live-fixture-row {
+    .row {
+      &.fixture {
+        .league-name-container {
+          .league-name,
+          .text {
+            color: $black;
+          }
+        }
+
+        .info {
+          background-color: $theme-table-bg;
+          color: $theme-row-color;
+
+          .score-board,
+          .start-time {
+            background-color: #008000;
+            color: $theme2-live-fill-color;
+          }
+        }
+
+        .last-item.count {
+          a {
+            &:hover {
+              background-color: $theme-live-hover-color;
+            }
+          }
+        }
+
+        > .items .item:nth-child(odd) {
+          .sub-row {
+            &.over-under {
+              .row-item:first-child {
+                background-color: $black;
+              }
+            }
+
+            .row-item {
+              background-color: $theme2-row-odd-bg;
+
+              &.locked {
+                background-color: $theme2-locked-bg;
+              }
+            }
+          }
+        }
+
+        > .items .item:nth-child(even) {
+          .sub-row {
+            .row-item {
+              background-color: $theme2-row-even-bg;
+            }
+          }
+        }
+
+        .item {
+          .sub-row {
+            .row-item {
+              &.selected {
+                color: $white !important;
+                background-color: #008000 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #league-container-list .tbl,
+  #pre-live-fixture-row {
+    .row {
+      &.fixture {
+        .info {
+          background-color: $theme-table-bg;
+          color: $theme-row-color;
+
+          .score-board,
+          .start-time {
+            background-color: $theme-pre-live-fill-bg;
+            color: $theme2-pre-live-fill-color;
+          }
+        }
+
+        .last-item.count {
+          a {
+            &:hover {
+              background-color: $theme-pre-live-hover-color;
+            }
+          }
+        }
+      }
+
+      > .item:nth-child(odd) {
+        .sub-row {
+          &.over-under {
+            .row-item:first-child {
+              background-color: $black;
+            }
+          }
+
+          .row-item {
+            background-color: $theme2-row-odd-bg;
+
+            &.locked {
+              background-color: $theme2-locked-bg;
+            }
+          }
+        }
+      }
+
+      > .item:nth-child(even) {
+        .sub-row {
+          .row-item {
+            background-color: $theme2-row-even-bg;
+          }
+        }
+      }
+
+      .item {
+        .sub-row {
+          .row-item {
+            &.selected {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #league-container-list .tbl,
+  #live-fixture-row,
+  #pre-live-fixture-row {
+    background-color: $theme-table-bg;
+    color: $theme-row-color;
+
+    .row {
+      .last-item.count {
+        background-color: $theme-last-item;
+
+        a {
+          background-color: unset;
+        }
+      }
+
+      .item {
+        .sub-row {
+          &.over-under {
+            > .row-item:first-child {
+              background-color: $black;
+              color: $white;
+            }
+          }
+
+          .row-item {
+            background-color: $theme-row-bg;
+            color: $theme-row-color;
+
+            &.locked {
+              background-color: $gray30;
+            }
+
+            &.selected {
+              background-color: $theme-row-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme2 {
+  @include theme2($theme2-table-bg,$theme2-live-fill-bg,$theme2-live-fill-color,$theme2-pre-live-fill-bg,$theme2-pre-live-fill-color,$theme-2-header-bg, $theme-2-header-color, $theme-2-row-bg, $theme-2-row-color, $theme-2-row-hover, $theme-2-last-item, $theme-2-row-info-color,$theme2-live-hover-color,$theme2-pre-live-hover-color);
+}

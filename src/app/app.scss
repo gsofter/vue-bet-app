@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  overflow-y: scroll !important;
+  scroll-behavior: smooth;
+
+  #app-layout {
+    display: grid;
+    height: 100vh;
+    background: $black;
+  }
+}
